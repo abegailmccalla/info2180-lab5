@@ -1,17 +1,65 @@
-<?php
-$host = 'localhost';
-$username = 'lab5_user';
-$password = '';
-$dbname = 'world';
+/* Add your own styles */
+header
+{
+    display: flex;
+    background-color: rgba(209, 209, 209, 0.712);
+    /*rgb(74, 71, 71)*/
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 50px;
+}
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT * FROM countries");
+header img
+{
+    height: 125px;
+    width: 200px;
+}
 
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+main
+{
+    text-align: center;
+}
 
-?>
-<ul>
-<?php foreach ($results as $row): ?>
-  <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
-<?php endforeach; ?>
-</ul>
+main button
+{
+    background-color: rgb(153, 14, 153);
+    color: rgb(228, 228, 0);
+    border-radius: 5px;
+}
+
+button
+{
+    width: 90px;
+    height: 45px;
+}
+
+table
+{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th
+{
+    border: 1px solid #dddddd79;
+    padding: 8px;  
+}
+
+table th:nth-child(odd)
+{
+    color: rgb(228, 228, 0)
+    ;
+}
+
+table th:nth-child(even)
+{
+    color: rgb(153, 14, 153);
+}
+
+tr :nth-child(even)
+{
+    background-color: rgba(209, 209, 209, 0.712);
+}
